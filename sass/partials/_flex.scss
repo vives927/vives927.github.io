@@ -1,0 +1,170 @@
+/* For flexbox parent - first value is usually the default */
+@mixin displayFlex($val) {
+    @if $val == flex {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+    }
+    @if $val == inline {
+        display: -ms-inline-flexbox;
+        display: -webkit-inline-flex;
+        display: inline-flex;
+    }   
+}
+
+@mixin flexDirection($val) {
+    @if $val == row {
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+    @if $val == row-reverse {
+        -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+    }
+    @if $val == column {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    @if $val == column-reverse {
+        -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+}
+
+@mixin flexWrap($val) {
+    @if $val == nowrap {
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+    @if $val == wrap {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    @if $val == wrap-reverse {
+        -webkit-flex-wrap: wrap-reverse;
+        -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+    }
+}
+
+@mixin flexJustifyContent($val) {
+    @if $val == flex-start {
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+    @if $val == flex-end {
+        -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+    @if $val == center {
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    @if $val == space-between {
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+    @if $val == space-around {
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+}
+
+@mixin flexAlignItems($val) {
+    @if $val == flex-start {
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+    @if $val == flex-end {
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }
+    @if $val == center {
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    @if $val == baseline {
+        -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline;
+    }
+    @if $val == stretch {
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+    }
+}
+
+@mixin flexAlignContent($val) {
+    @if $val == start {
+        -webkit-align-content: flex-start;
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+    }
+    @if $val == flex-end {
+        -webkit-align-content: flex-end;
+        -ms-flex-line-pack: end;
+        align-content: flex-end;
+    }
+    @if $val == center {
+        -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+    }
+    @if $val == space-between {
+        -webkit-align-content: space-between;
+        -ms-flex-line-pack: justify;
+        align-content: space-between;
+    }
+    @if $val == space-around {
+        -webkit-align-content: space-around;
+        -ms-flex-line-pack: distribute;
+        align-content: space-around;
+    }
+    @if $val == stretch {
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+    }
+}
+
+/* For flexbox children */
+@mixin flexOrder($val) {
+    -webkit-order: $val;
+    -ms-flex-order: $val;
+    order: $val;
+}
+
+@mixin flexSize($grow, $shrink, $basis) {
+    /* Definition of Terms:
+        $grow = Number which determines how much the flex item will grow relative to the 
+            rest of the flex items in the flex container when positive free space is distributed.
+        $shrink = Number which determines how much the flex item will shrink relative to the 
+            rest of the flex items in the flex container when negative free space is distributed.
+        $basis = The initial width or height (depending on main axis) of the flex item, 
+            before free space is distributed according to the flex factors.
+    */
+    -webkit-flex: $grow $shrink $basis;
+    -ms-flex: $grow $shrink $basis;
+    flex: $grow $shrink $basis;
+}
+
+@mixin flexAlignSelf($val) {
+    -webkit-align-self: $val;
+    -ms-flex-item-align: $val;
+    align-self: $val;
+}
