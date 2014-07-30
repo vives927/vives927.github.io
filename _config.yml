@@ -1,5 +1,6 @@
 name: Jekyll Project
-url: "http://localhost:4000"
+url: "/project"
+destination: project
 exclude: [
     "README.md",
     "*.zip",
@@ -11,7 +12,6 @@ exclude: [
     "TODO.*"
 ]
 keep_files: [
-    "css",
-    "_html"
+    "css"
 ]
 port: 7100

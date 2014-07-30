@@ -1,4 +1,4 @@
 CD sass
-START cmd /k sass --watch .:../_site/css -t expanded
+START cmd /k sass --watch .:../project/css
 CD ../
 START cmd /k jekyll serve --watch
