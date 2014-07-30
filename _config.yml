@@ -1,17 +1,13 @@
-name: Jekyll Project
+name: GenevieveNelson
 url: "/project"
+port: 7100
 destination: project
 exclude: [
     "README.md",
     "*.zip",
     "*.bat",
-    "sass",
-    "gulpfile.js",
-    "package.json",
-    "node_modules",
-    "TODO.*"
+    "sass"
 ]
 keep_files: [
     "css"
 ]
-port: 7100
