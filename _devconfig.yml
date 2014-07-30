@@ -1,0 +1,13 @@
+name: GenevieveNelson
+url: ""
+port: 7100
+destination: project
+exclude: [
+    "README.md",
+    "*.zip",
+    "*.bat",
+    "sass"
+]
+keep_files: [
+    "css"
+]
