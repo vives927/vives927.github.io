@@ -24,17 +24,19 @@ h1 {
   -ms-flex-align: center;
   align-items: center; }
   .pics .pic {
-    padding: 30px;
-    /* Definition of Terms:
-        $grow = Number which determines how much the flex item will grow relative to the 
-            rest of the flex items in the flex container when positive free space is distributed.
-        $shrink = Number which determines how much the flex item will shrink relative to the 
-            rest of the flex items in the flex container when negative free space is distributed.
-        $basis = The initial width or height (depending on main axis) of the flex item, 
-            before free space is distributed according to the flex factors.
-    */
-    -webkit-flex: 0 1 33.33333%;
-    -ms-flex: 0 1 33.33333%;
-    flex: 0 1 33.33333%; }
+    padding: 30px; }
+    @media (min-width: 800px) {
+      .pics .pic {
+        /* Definition of Terms:
+            $grow = Number which determines how much the flex item will grow relative to the 
+                rest of the flex items in the flex container when positive free space is distributed.
+            $shrink = Number which determines how much the flex item will shrink relative to the 
+                rest of the flex items in the flex container when negative free space is distributed.
+            $basis = The initial width or height (depending on main axis) of the flex item, 
+                before free space is distributed according to the flex factors.
+        */
+        -webkit-flex: 0 1 33.33333%;
+        -ms-flex: 0 1 33.33333%;
+        flex: 0 1 33.33333%; } }
     .pics .pic img {
       max-width: 100%; }

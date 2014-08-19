@@ -9,11 +9,17 @@
         <link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{{ site.url }}/css/normalize.css">
         <link rel="stylesheet" href="{{ site.url }}/css/site.css">
+        {% for sheet in page.styles %}
+            <link rel="stylesheet" href="{{ site.url }}/css/{{sheet}}">
+        {% endfor %}
     </head>
     <body>
         {{ content }}
         <script src="{{ site.url }}/js/lib/jquery.js"></script>
         <script src="{{ site.url }}/js/lib/modernizr.js"></script>
         <script src="{{ site.url }}/js/site.js"></script>
+        {% for file in page.scripts %}
+            <script src="{{ site.url }}/js/{{file}}"></script>
+        {% endfor %}
     </body>
 </html>
