@@ -1,4 +1,3 @@
-@import "partials/flex";
 @import "partials/mixins";
 
 * {
@@ -79,26 +78,6 @@ header {
         .sidebar {
             float: right;
             width: percentage(1/3);
-        }
-    }
-}
-
-
-
-/* Summer 2014 template */
-.pics {
-    @include displayFlex(flex);
-    @include flexWrap(wrap);
-    @include flexAlignItems(center);
-
-    .pic {
-        padding: 30px;
-        @media (min-width: 800px) {
-            @include flexSize(0, 1, percentage(1/3));
-        }
-    
-        img {
-            max-width: 100%;
         }
     }
 }
