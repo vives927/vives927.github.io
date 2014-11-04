@@ -1,0 +1,18 @@
+/* Recipe template */
+.Recipe header {
+  background: teal; }
+.Recipe .crumb,
+.Recipe .category,
+.Recipe .published {
+  padding: 0 0 5px; }
+.Recipe .image img {
+  max-width: 100%;
+  border: 2px solid #000; }
+.Recipe .ingredients {
+  margin-top: 20px; }
+.Recipe .comments {
+  padding: 15px 0; }
+  .Recipe .comments h3 {
+    padding: 0; }
+.Recipe .instructions li {
+  padding: 0 0 7px; }

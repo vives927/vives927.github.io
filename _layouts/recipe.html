@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Genevieve Nelson - {{ page.title }}</title>
+        <meta name="description" content="My personal site">
+        <meta name="viewport" content="initial-scale=1">
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{ site.url }}/css/normalize.css">
+        <link rel="stylesheet" href="{{ site.url }}/css/site.css">
+        <link rel="stylesheet" href="{{ site.url }}/css/recipe.css">
+    </head>
+    <body>
+        <div class="Container Recipe">
+            <header>
+                <h1>{{ page.title }}</h1>
+            </header>
+            <main>
+                <div class="two-col">
+                    <div class="sidebar">
+                        <div class="image"><img src="../img/recipes/{{ page.image }}" alt="{{ page.title }}"></div>
+                    </div>
+                    <div class="main-content">
+                        <div class="crumb"><a href="../recipe-index.html">Back to Recipes</a></div>
+                        <div class="category">Category:&nbsp;&nbsp;{{ page.category }}</div>
+                        <div class="published">Date Published: {{ page.published }}</div>
+                        <div class="servings">Servings: <strong>{{ page.servings }}</strong></div>
+                        {{ content }}
+                        <div class="source">
+                            <p><strong>Source:</strong> <a href="{{ page.source }}">{{ page.source }}</a></p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

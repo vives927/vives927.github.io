@@ -1,18 +1,73 @@
 /* For flexbox parent - first value is usually the default */
 /* For flexbox children */
+/* Clearfix */
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 body {
-  background: #000;
-  color: #fff; }
+  background: #fff;
+  color: #000;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  line-height: 1.57; }
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0 0 10px;
+  font-weight: 400; }
 
 h1 {
-  font-family: 'Playfair Display SC';
-  font-weight: 700;
-  text-align: center; }
+  font-size: 30px;
+  font-weight: 300; }
+  @media (min-width: 600px) {
+    h1 {
+      font-size: 40px; } }
 
+p {
+  margin: 0;
+  padding: 0 0 15px; }
+
+ul,
+ol {
+  margin-top: 0; }
+
+header {
+  padding: 15px 10px;
+  background: teal;
+  color: #fff;
+  text-align: center; }
+  header h1 {
+    padding: 0; }
+  @media (min-width: 600px) {
+    header {
+      padding: 25px 15px; } }
+
+.Container {
+  max-width: 960px;
+  margin: 0 auto; }
+
+.Hidden {
+  display: none; }
+
+.two-col {
+  padding: 20px 10px;
+  background: #efefef; }
+  .two-col:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media (min-width: 600px) {
+    .two-col {
+      padding: 30px 35px; }
+      .two-col .main-content {
+        float: left;
+        width: 66.66667%; }
+      .two-col .sidebar {
+        float: right;
+        width: 33.33333%; } }
+
+/* Summer 2014 template */
 .pics {
   display: -ms-flexbox;
   display: -webkit-flex;
