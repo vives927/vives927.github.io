@@ -20,15 +20,28 @@
                 <div class="two-col">
     <div class="sidebar">
         <div class="sort">
-            <label for="sortBy">Sort By:</label>
-            <select name="sortBy" id="sortBy">
-                <option value="All">Show All</option>
-                <option value="Main Dish">Main Dish</option>
-                <option value="Dessert">Dessert</option>
-                <option value="Side Dish">Side Dish</option>
-                <option value="Beverage">Beverage</option>
-                <option value="Appetizer">Appetizer</option>
-            </select>
+            <div class="sort-group">
+                <label for="sortByCategory">Sort by Category:</label>
+                <select name="sortByCategory" id="sortByCategory">
+                    <option value="All">Show All</option>
+                    <option value="Main Dish">Main Dish</option>
+                    <option value="Dessert">Dessert</option>
+                    <option value="Side Dish">Side Dish</option>
+                    <option value="Beverage">Beverage</option>
+                    <option value="Appetizer">Appetizer</option>
+                </select>
+            </div>
+            <div class="sort-group">
+                <label for="sortBySource">Sort by Source:</label>
+                <select name="sortBySource" id="sortBySource">
+                    <option value="All">Show All</option>
+                    <option value="All Recipes">All Recipes</option>
+                    <option value="The Pioneer Woman">The Pioneer Woman</option>
+                    <option value="Bon Appetit">Bon Appetit</option>
+                    <option value="Serious Eats">Serious Eats</option>
+                    <option value="Pinch of Yum">Pinch of Yum</option>
+                </select>
+            </div>
         </div>
     </div>
     <div class="main-content">
@@ -39,57 +52,125 @@
                 
             
                 
-                    <li data-category="Main Dish"><a href="/recipes/beef-and-peppers-stirfry.html">Beef and Peppers Stir-Fry in Black Bean Sauce</a></li>
+                    <li data-category="Main Dish" data-source="Valerie Ferrin"><a href="/recipes/baked-chicken-and-rice.html">Baked Chicken and Rice</a></li>
                 
             
                 
-                    <li data-category="Main Dish"><a href="/recipes/bombay-sliders-with-garlic-curry-sauce.html">Bombay Sliders with Garlic Curry Sauce</a></li>
+                    <li data-category="Main Dish" data-source="N/A"><a href="/recipes/barley-vegetable-soup-with-sausage.html">Barley Vegetable Soup with Sausage</a></li>
                 
             
                 
-                    <li data-category="Appetizer"><a href="/recipes/cheesy-mushroom-pull-apart-bread.html">Cheesy Mushroom Pull Apart Bread</a></li>
+                    <li data-category="Main Dish" data-source="Beyond Kimchee"><a href="/recipes/beef-and-peppers-stirfry.html">Beef and Peppers Stir-Fry in Black Bean Sauce</a></li>
                 
             
                 
-                    <li data-category="Main Dish"><a href="/recipes/chicken-enchilada-rice-casserole.html">Chicken Enchilada Rice Casserole</a></li>
+                    <li data-category="Main Dish" data-source="Bon Appetit"><a href="/recipes/bombay-sliders-with-garlic-curry-sauce.html">Bombay Sliders with Garlic Curry Sauce</a></li>
                 
             
                 
-                    <li data-category="Beverage"><a href="/recipes/cranberry-margaritas.html">Cranberry Margaritas</a></li>
+                    <li data-category="Main Dish" data-source="Serious Eats"><a href="/recipes/butter-paneer-with-spinach.html">Butter Paneer with Spinach</a></li>
                 
             
                 
-                    <li data-category="Main Dish"><a href="/recipes/easy-mulligatawny.html">Easy Mulligatawny</a></li>
+                    <li data-category="Appetizer" data-source="Beantown Baker"><a href="/recipes/cheesy-mushroom-pull-apart-bread.html">Cheesy Mushroom Pull Apart Bread</a></li>
                 
             
                 
-                    <li data-category="Dessert"><a href="/recipes/flourless-chocolate-cake.html">Flourless Chocolate Cake</a></li>
+                    <li data-category="Main Dish" data-source="Jo Cooks"><a href="/recipes/chicken-enchilada-rice-casserole.html">Chicken Enchilada Rice Casserole</a></li>
                 
             
                 
-                    <li data-category="Dessert"><a href="/recipes/hello-dolly-bars.html">Hello Dolly Bars (7-Layer Bars)</a></li>
+                    <li data-category="Dessert" data-source="Valerie Ferrin"><a href="/recipes/congo-squares.html">Congo Squares (Blondies)</a></li>
+                
+            
+                
+                    <li data-category="Beverage" data-source="Annie's Eats"><a href="/recipes/cranberry-margaritas.html">Cranberry Margaritas</a></li>
+                
+            
+                
+                    <li data-category="Dessert" data-source="Teri Miles"><a href="/recipes/creamy-cheese-pie.html">Creamy Cheese Pie</a></li>
+                
+            
+                
+                    <li data-category="Main Dish" data-source="Pinch of Yum"><a href="/recipes/easy-crockpot-carnitas.html">Easy Crockpot Carnitas</a></li>
+                
+            
+                
+                    <li data-category="Main Dish" data-source="The Pioneer Woman"><a href="/recipes/easy-mulligatawny.html">Easy Mulligatawny</a></li>
+                
+            
+                
+                    <li data-category="Dessert" data-source="Recipe.com"><a href="/recipes/flourless-chocolate-cake.html">Flourless Chocolate Cake</a></li>
+                
+            
+                
+                    <li data-category="Appetizer" data-source="Genevieve Nelson"><a href="/recipes/fresh-tomato-salsa.html">Fresh Tomato Salsa</a></li>
+                
+            
+                
+                    <li data-category="Dessert" data-source="Serious Eats"><a href="/recipes/hello-dolly-bars.html">Hello Dolly Bars (7-Layer Bars)</a></li>
                 
             
                 
             
                 
-                    <li data-category="Main Dish"><a href="/recipes/skillet-rosemary-chicken.html">Skillet Rosemary Chicken</a></li>
+                    <li data-category="Main Dish" data-source="Gimme Some Oven"><a href="/recipes/italian-orzo-spinach-soup.html">Italian Orzo Spinach Soup</a></li>
                 
             
                 
-                    <li data-category="Main Dish"><a href="/recipes/slow-cooker-chicken-tikka-masala.html">Slow-Cooker Chicken Tikka Masala</a></li>
+                    <li data-category="Main Dish" data-source="N/A"><a href="/recipes/italian-rigatoni-casserole.html">Italian Rigatoni Casserole</a></li>
                 
             
                 
-                    <li data-category="Dessert"><a href="/recipes/strawberry-pretzel-salad.html">Strawberry Pretzel Salad</a></li>
+                    <li data-category="Side Dish" data-source="Valerie Ferrin"><a href="/recipes/moms-potato-salad.html">Mom's Potato Salad</a></li>
                 
             
                 
-                    <li data-category="Side Dish"><a href="/recipes/turmeric-and-vegetable-millet.html">Turmeric and Vegetable Millet</a></li>
+                    <li data-category="Side Dish" data-source="Annie's Eats"><a href="/recipes/mushroom-gouda-quinoa-bake.html">Mushroom Gouda Quinoa Bake</a></li>
                 
             
                 
-                    <li data-category="Appetizer"><a href="/recipes/wisconsin-beer-dip.html">Wisconsin Beer Dip</a></li>
+                    <li data-category="Main Dish" data-source="The Pioneer Woman"><a href="/recipes/oven-bbq-chicken.html">Oven-Roasted BBQ Chicken Thighs</a></li>
+                
+            
+                
+                    <li data-category="Main Dish" data-source="Ashley Hoard"><a href="/recipes/poppyseed-chicken.html">Poppyseed Chicken</a></li>
+                
+            
+                
+                    <li data-category="Main Dish" data-source="Real Simple"><a href="/recipes/quick-beef-bourguignonne.html">Quick Beef Bourguignonne</a></li>
+                
+            
+                
+                    <li data-category="Side Dish" data-source="Real Simple"><a href="/recipes/red-rice.html">Red Rice</a></li>
+                
+            
+                
+                    <li data-category="Main Dish" data-source="Mama Miss"><a href="/recipes/seven-vegetable-minestrone.html">Seven Vegetable Minestrone</a></li>
+                
+            
+                
+                    <li data-category="Main Dish" data-source="Chimera Obscura"><a href="/recipes/skillet-rosemary-chicken.html">Skillet Rosemary Chicken</a></li>
+                
+            
+                
+                    <li data-category="Main Dish" data-source="Real Simple"><a href="/recipes/slow-cooker-chicken-tikka-masala.html">Slow-Cooker Chicken Tikka Masala</a></li>
+                
+            
+                
+                    <li data-category="Main Dish" data-source="Weight Watchers"><a href="/recipes/stove-top-cassoulet.html">Stove-Top Cassoulet</a></li>
+                
+            
+                
+                    <li data-category="Dessert" data-source="All Recipes"><a href="/recipes/strawberry-pretzel-salad.html">Strawberry Pretzel Salad</a></li>
+                
+            
+                
+                    <li data-category="Side Dish" data-source="Spicie Foodie"><a href="/recipes/turmeric-and-vegetable-millet.html">Turmeric and Vegetable Millet</a></li>
+                
+            
+                
+                    <li data-category="Appetizer" data-source="A Teaspoon of Happiness"><a href="/recipes/wisconsin-beer-dip.html">Wisconsin Beer Dip</a></li>
                 
             
         </ul>

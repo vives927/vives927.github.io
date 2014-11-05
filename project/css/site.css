@@ -64,3 +64,8 @@ header {
       .two-col .sidebar {
         float: right;
         width: 33.33333%; } }
+
+.sort-group {
+  padding: 0 0 20px; }
+  .sort-group label {
+    display: block; }
