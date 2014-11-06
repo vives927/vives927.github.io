@@ -1,8 +1,32 @@
-/* Recipe template */
+/* Recipe and Recipe Index templates */
 .Recipe {
 
     header {
+        padding: 15px 10px;
         background: teal;
+        color: #fff;
+        text-align: center;
+
+        h1 {
+            padding: 0;
+        }
+
+        @media (min-width: 600px) {
+            padding: 25px 15px;
+        }
+    }
+
+    .recipe-list {
+        margin: 0;
+        padding: 0;
+    }
+
+    .sort-group {
+        padding: 0 0 20px;
+
+        label {
+            display: block;
+        }
     }
 
     .crumb,

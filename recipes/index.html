@@ -1,11 +1,12 @@
 ---
-layout: default
+layout: recipe-index
 title: Recipes
 scripts: recipe.js
 ---
 
 <div class="two-col">
     <div class="sidebar">
+        
         <div class="sort">
             <div class="sort-group">
                 <label for="sortByCategory">Sort by Category:</label>
@@ -49,7 +50,7 @@ scripts: recipe.js
         </div>
     </div>
     <div class="main-content">
-        <ul id="RecipeList">
+        <ul class="recipe-list" id="RecipeList">
             {% for page in site.pages %}
                 {% if page.layout == 'recipe' %}
                     <li data-category="{{ page.category }}" data-source="{{ page.source }}"><a href="{{ page.url }}">{{ page.title }}</a></li>

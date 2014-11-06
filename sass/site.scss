@@ -38,21 +38,6 @@ ol {
     margin-top: 0;
 }
 
-header {
-    padding: 15px 10px;
-    background: teal;
-    color: #fff;
-    text-align: center;
-
-    h1 {
-        padding: 0;
-    }
-
-    @media (min-width: 600px) {
-        padding: 25px 15px;
-    }
-}
-
 .Container {
     max-width: 960px;
     margin: 0 auto;
@@ -82,11 +67,3 @@ header {
     }
 }
 
-// styles for recipe index page
-.sort-group {
-    padding: 0 0 20px;
-
-    label {
-        display: block;
-    }
-}

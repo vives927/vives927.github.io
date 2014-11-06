@@ -42,5 +42,10 @@
                 </div>
             </main>
         </div>
+
+        <script src="{{ site.url }}/js/lib/jquery.js"></script>
+        {% for file in page.scripts %}
+            <script src="{{ site.url }}/js/{{file}}"></script>
+        {% endfor %}
     </body>
 </html>

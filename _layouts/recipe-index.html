@@ -9,17 +9,17 @@
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{{ site.url }}/css/normalize.css">
         <link rel="stylesheet" href="{{ site.url }}/css/site.css">
-        {% for sheet in page.styles %}
-            <link rel="stylesheet" href="{{ site.url }}/css/{{sheet}}">
-        {% endfor %}
+        <link rel="stylesheet" href="{{ site.url }}/css/recipe.css">
     </head>
     <body>
-        <div class="Container">
+        <div class="Container Recipe">
             <header>
                 <h1>{{ page.title }}</h1>
             </header>
             <main>
-                {{ content }}
+                <div class="two-col">
+                    {{ content }}
+                </div>
             </main>
         </div>
 
