@@ -1,0 +1,23 @@
+.fullscreen {
+  height: 800px;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .fullscreen h1 {
+    margin: 50px 0 0 50px;
+    padding: 0 20px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 60px; }
+
+.africa-1 {
+  background-image: url(../img/african-savannah.jpg); }
+
+.africa-2 {
+  background-image: url(../img/african-mountain.jpg); }
+
+.africa-3 {
+  background-image: url(../img/african-lion.jpg); }
+
+.africa-4 {
+  background-image: url(../img/african-plains.jpg); }

@@ -1,0 +1,128 @@
+// new styles
+.resultTabs {
+    margin: 30px 0 0;
+
+    .tab-group {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+    }
+
+    .tab {
+        display: block;
+        padding: 7px 20px;
+        background: white;
+        color: #00b0d7;
+        border-radius: 3px;
+        font-weight: 400;
+        font-size: 18px;
+
+        &:hover {
+            color: #75d03a;
+        }
+
+        &[aria-selected=true] {
+            color: white;
+            background: #75d03a;
+        }
+    }
+
+    .tab-content {
+        display: none;
+
+        &[aria-hidden=false] {
+            display: block;
+        }
+
+        .google-map {
+            margin: 30px 0;
+        }
+
+        iframe {
+            max-width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 799px) {
+        .tab-group li {
+            margin: 0 3px;
+        }
+
+        .tab {
+            padding: 7px 10px;
+        }
+    }
+}
+
+
+
+.locationSearch {
+    margin: 20px 0;
+    background: #f3f3f3;
+    padding: 1em;
+
+    label {
+        font-size: 18px;
+        font-weight: 400;
+    }
+    
+    input[type="text"] {
+        margin: 0 10px;
+        height: 30px;
+        border: 1px solid #ccc;
+    }
+
+    .search {
+        padding: 7px 15px;
+        background: #00b0d7;
+        color: #fff;
+        border-radius: 3px;
+        font-weight: 400;
+        font-size: 16px;
+        border: 0;
+
+        &:hover {
+            opacity: .9;
+        }
+    }
+
+    .resetFilters {
+        padding: 7px 15px;
+        background: #808285;
+        color: #fff;
+        border-radius: 3px;
+        font-weight: 400;
+        font-size: 16px;
+        border: 0;
+
+        &:hover {
+            opacity: .9;
+        }
+    }
+
+    @media screen and (max-width: 799px) {
+        label,
+        input[type="text"] {
+            display: block;
+        }
+
+        label,
+        input[type="text"],
+        .search {
+            margin: 0 0 10px;
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+        .resetFilters {
+            float: right;
+        }
+    }
+}
