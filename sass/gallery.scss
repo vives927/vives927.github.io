@@ -1,0 +1,13 @@
+ .item { 
+    width: percentage(1/4); 
+    padding: 5px;
+
+    &.large {
+        width: percentage(1/2);
+    }
+
+    img {
+        width: 100%;
+        display: block;
+    }
+}
