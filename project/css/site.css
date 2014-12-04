@@ -5,26 +5,31 @@
 
 body {
   margin: 0;
-  background: #fff;
-  color: #000;
-  font-family: Lato, sans-serif;
+  background: #a5b1b2;
+  color: #4b4347;
+  font-family: "Lato", sans-serif;
   font-size: 16px;
   line-height: 1.57; }
 
 h1, h2, h3, h4 {
   margin: 0;
-  padding: 0 0 10px;
-  font-weight: 400; }
+  padding: 0 0 15px; }
 
 h1 {
-  font-size: 30px;
-  font-weight: 300; }
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: 300;
+  color: #4b4347; }
   @media (min-width: 600px) {
     h1 {
       font-size: 40px; } }
 
 h2 {
-  font-size: 30px; }
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  color: #1d7880;
+  font-family: "Raleway", sans-serif; }
 
 p {
   margin: 0;
@@ -37,6 +42,10 @@ ol {
 .Container {
   max-width: 960px;
   margin: 0 auto; }
+
+.pageWrap {
+  background: #fff;
+  box-shadow: 12px 0 15px -4px rgba(0, 0, 0, 0.35), -12px 0 8px -4px rgba(0, 0, 0, 0.35); }
 
 .Hidden {
   display: none; }
@@ -57,3 +66,11 @@ ol {
       .two-col .sidebar {
         float: right;
         width: 33.33333%; } }
+
+footer {
+  padding: 10px 32px;
+  background: #4b4347;
+  color: #fff;
+  font-size: 12px; }
+  footer a {
+    color: #fff; }

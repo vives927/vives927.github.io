@@ -1,10 +1,6 @@
 @import "partials/base";
 
 // Homepage styles
-body {
-    background: $teal;
-}
-
 header {
     height: 450px;
     background: url(../img/africa/african-plains.jpg) no-repeat center;
@@ -28,28 +24,11 @@ header {
     }
 }
 
-.pageWrap {
-    height: 100vh;
-    background: #fff;
-    box-shadow: 12px 0 15px -4px rgba(0,0,0,.35), 
-        -12px 0 8px -4px rgba(0,0,0,.35);
-        //0px 12px 15px -4px rgba(0,0,0,.35);
-    }
-
-nav {
-
-    a {
-        display: inline-block;
-        text-decoration: none;
-    }
-}
-
 .tagline {
     padding: 20px 32px 25px;
     margin: 0 0 10px;
-    background: $chocolate;
-    border-top: 6px solid #000;
-    border-bottom: 1px solid #000;
+    background: $brown;
+    border-top: 6px solid $chocolate;
     box-shadow: 0px 12px 15px -4px rgba(0,0,0,.35);
     color: #fff;
     text-align: center;
@@ -59,35 +38,76 @@ nav {
 
 .section {
     padding: 30px 32px 40px;
+}
 
-    &.pink {
-        border-top: 1px solid #FAD6CD;
-        border-bottom: 1px solid #FAD6CD;
-        background: $pink;
+.Portfolio {
+
+    .threeCol {
+        margin: 0 -15px;
+        @include clearfix;
+
+        .col {
+            float: left;
+            width: percentage(1/3);
+            padding: 0 15px;
+            overflow: hidden;
+
+            img {
+                background: $teal;
+                padding: 7px;
+                max-width: 100%;
+                -webkit-filter: grayscale(1);
+                filter: grayscale(1);
+
+                &:hover {
+                    -webkit-filter: none;
+                    filter: none;
+                }
+            }
+        }
     }
 }
 
-.threeCol {
-    margin: 0 -15px;
-    @include clearfix;
+.Services {
+    border-top: 1px solid $dark-pink;
+    border-bottom: 1px solid $dark-pink;
+    background: $pink;
 
-    .col {
-        float: left;
-        width: percentage(1/3);
-        padding: 0 15px;
-        overflow: hidden;
+    .serviceList {
+        margin: 0;
+        padding: 20px 0;
+        list-style: none;
+        text-align: center;
+        @include clearfix;
 
-        img {
-            background: $teal;
-            padding: 7px;
-            max-width: 100%;
-            -webkit-filter: grayscale(1);
-            filter: grayscale(1);
-
-            &:hover {
-                -webkit-filter: none;
-                filter: none;
-            }
+        li {
+            width: percentage(1/4);
+            float: left;
+            font-weight: 600;
+            font-size: 18px;
         }
+    }
+}
+
+.AboutMe {
+    background: url(../img/africa/african-savannah.jpg) no-repeat center;
+    background-size: cover;
+
+    .transparent {
+        width: 60%;
+        margin-left: -32px;
+        background: rgba(255,255,255,.8);
+        padding: 30px;
+    }
+}
+
+.ContactInfo {
+ 
+    .profilePic {
+        float: left;
+        width: 150px;
+        margin: 0 15px 15px 0;
+        padding: 7px;
+        background: $teal;
     }
 }
