@@ -10,11 +10,23 @@
         <link rel="stylesheet" href="/css/normalize.css">
         <link rel="stylesheet" href="/css/site.css">
         
-            <link rel="stylesheet" href="/css/gallery.css">
-        
     </head>
     <body>
-        <div id="container">
+        <style type="text/css">
+    .item { 
+        width: 25%; 
+        padding: 5px;
+    }
+    .item.large {
+        width: 50%;
+    }
+    .item img {
+        width: 100%;
+        display: block;
+    }
+</style>
+
+<div id="container">
     <div class="item"><img src="img/signs/sign-1.jpg" alt=""></div>
     <div class="item"><img src="img/signs/sign-7.jpg" alt=""></div>
     <div class="item large"><img src="img/signs/sign-2.jpg" alt=""></div>
@@ -37,7 +49,7 @@
         
             <script src="/js/lib/masonry.js"></script>
         
-            <script src="/js/gallery.js"></script>
+            <script src="/js/masonry-test.js"></script>
         
     </body>
 </html>

@@ -80,6 +80,10 @@ header {
     background: rgba(255, 255, 255, 0.8);
     padding: 30px; }
 
+.ContactInfo:after {
+  content: "";
+  display: table;
+  clear: both; }
 .ContactInfo .profilePic {
   float: left;
   width: 150px;

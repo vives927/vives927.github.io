@@ -102,6 +102,7 @@ header {
 }
 
 .ContactInfo {
+    @include clearfix;
  
     .profilePic {
         float: left;

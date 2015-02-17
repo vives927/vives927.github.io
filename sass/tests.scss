@@ -1,3 +1,8 @@
+body {
+    margin: 2em;
+    background: #fff;
+}
+
 .vertical-align {
     margin: 0;
     padding: 0;
@@ -47,5 +52,21 @@
         left: -25px;
         color: blue;
         font-size: 20px;
+    }
+}
+
+
+.filter-pics { // filters don't work for IE
+
+    img {
+        max-height: 300px;
+    }
+    img:first-child {
+        -webkit-filter: hue-rotate(120deg) opacity(0.5);
+        filter: hue-rotate(120deg) opacity(0.5);
+    }
+    img:last-child {
+        -webkit-filter: hue-rotate(300deg) opacity(0.5);
+        filter: hue-rotate(300deg) opacity(0.5);
     }
 }

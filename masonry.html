@@ -1,8 +1,20 @@
 ---
 layout: fullscreen
-styles: gallery.css
-scripts: [lib/imagesloaded.js, lib/masonry.js, gallery.js]
+scripts: [lib/imagesloaded.js, lib/masonry.js, masonry-test.js]
 ---
+<style type="text/css">
+    .item { 
+        width: 25%; 
+        padding: 5px;
+    }
+    .item.large {
+        width: 50%;
+    }
+    .item img {
+        width: 100%;
+        display: block;
+    }
+</style>
 
 <div id="container">
     <div class="item"><img src="img/signs/sign-1.jpg" alt=""></div>

@@ -39,6 +39,9 @@ ul,
 ol {
   margin-top: 0; }
 
+a {
+  color: #1d7880; }
+
 .Container {
   max-width: 960px;
   margin: 0 auto; }
