@@ -1,0 +1,55 @@
+<DOCTYPE html>
+<html lang="en">
+    <head></head>
+    <body>
+        <div class="js-fileapi-wrapper">
+            <input type="file" id="FileInput">
+        </div>
+        <div id="FilePreview" style="height: 500px;">
+        </div>
+        <script src="/js/lib/jquery.js"></script>
+        <script>window.FileAPI = { staticPath: '/js/fileapi/' };</script>
+        <script src="/js/fileapi/FileAPI.min.js"></script>
+        <script src="/js/fileapi/dropfile.js"></script>
+        <script>
+            // FileAPI demo code
+            var choose = document.getElementById('FileInput');
+            var images = document.getElementById('FilePreview');
+            
+            FileAPI.event.on(choose, 'change', function (evt){
+                var files = FileAPI.getFiles(evt); // Retrieve file list
+                console.log(files); // gives name, type, size
+
+                 FileAPI.Image(files[0]).preview(100).get(function (err, img){
+                    images.appendChild(img);
+                    console.log(img);
+                });
+            });
+
+
+            // Dropfile demo code
+            images.ondragover = function () { return false; };
+            images.ondragenter = function () { return false; };
+            images.ondrop = function (e) {
+                e = e || window.event;
+
+                // Read from e.files, as well as e.dataTransfer
+                var files = (e.files || e.dataTransfer.files);
+
+                var s = "";
+                for (var i = 0; i < files.length; i++) {
+                    (function (i) {
+                        var reader = new FileReader();
+                        reader.onload = function (event) {
+                            images.innerHTML = "<li><img src='" + event.target.result + "' /> " + (files[i].name) + "</li>" + images.innerHTML;
+                        };
+                        reader.readAsDataURL(files[i]);
+                        console.log(files[i]); // name, date, size
+                    })(i);
+                }
+
+                return false;
+            };
+        </script>
+    </body>
+</html>
