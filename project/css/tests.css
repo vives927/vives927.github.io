@@ -53,3 +53,33 @@ body {
 .filter-pics img:last-child {
   -webkit-filter: hue-rotate(300deg) opacity(0.5);
   filter: hue-rotate(300deg) opacity(0.5); }
+
+.flex {
+  display: flex;
+  flex-wrap: wrap; }
+  .flex .intro {
+    padding: 30px;
+    background: green; }
+  .flex .sidebar {
+    padding: 30px;
+    background: red; }
+  .flex .mainContent {
+    padding: 30px;
+    background: blue; }
+  @media screen and (max-width: 799px) {
+    .flex .intro {
+      order: 2;
+      flex: 1 100%; }
+    .flex .sidebar {
+      order: 1;
+      flex: 1 100%; }
+    .flex .mainContent {
+      order: 3;
+      flex: 1 100%; } }
+  @media screen and (min-width: 800px) {
+    .flex .intro {
+      flex: 1 100%; }
+    .flex .sidebar {
+      flex: 1 auto; }
+    .flex .mainContent {
+      flex: 3 0px; } }

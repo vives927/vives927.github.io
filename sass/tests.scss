@@ -70,3 +70,51 @@ body {
         filter: hue-rotate(300deg) opacity(0.5);
     }
 }
+
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+
+    .intro {
+        padding: 30px;
+        background: green;
+    }
+
+    .sidebar {
+        padding: 30px;
+        background: red;
+    }
+
+    .mainContent {
+        padding: 30px;
+        background: blue;
+    }
+
+    @media screen and (max-width: 799px) {
+        .intro {
+            order: 2;
+            flex: 1 100%;
+        }
+        .sidebar {
+            order: 1;
+            flex: 1 100%;
+        }
+        .mainContent {
+            order: 3;
+            flex: 1 100%;
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+        .intro {
+            flex: 1 100%;
+        }
+        .sidebar {
+            flex: 1 auto;
+        }
+        .mainContent {
+            flex: 3 0px;
+        }
+    }
+}
