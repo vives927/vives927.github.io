@@ -1,4 +1,16 @@
+/* Simple box embossing mixin */
+/* Web transitions prefix mixin */
+/* Opacity fallback mixin for IE */
+/* REM fallback mixin */
 /* Clearfix */
+/* RGBA fallback mixin for IE */
+/* Breakpoint mixin */
+/* Placeholder prefix mixin */
+/* Background gradient prefix mixin */
+/* Columns */
+/* Unselectable prefix mixin */
+/* For flexbox parent - first value is usually the default */
+/* For flexbox children */
 header {
   height: 450px;
   background: url(../img/africa/african-plains.jpg) no-repeat center;

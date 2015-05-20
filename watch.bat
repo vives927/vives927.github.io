@@ -1,4 +1,4 @@
 CD sass
-START cmd /k sass --watch .:../project/css
+START "vives927 SASS" cmd /k sass --watch .:../project/css
 CD ../
-START cmd /k jekyll serve --watch --config _devconfig.yml
+START "vives927 Jekyll" cmd /k jekyll serve --watch --config _devconfig.yml

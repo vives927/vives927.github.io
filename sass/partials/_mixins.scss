@@ -1,3 +1,35 @@
+/* Simple box embossing mixin */
+@mixin box-emboss($opacity, $opacity2){
+    box-shadow: rgba(#fff, $opacity) 0 1px 0, inset rgba(#000, $opacity2) 0 1px 0;
+}
+
+/* Web transitions prefix mixin */
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+/* Opacity fallback mixin for IE */
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+/* REM fallback mixin */
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
 /* Clearfix */
 @mixin clearfix {
     &:after {
@@ -5,4 +37,76 @@
         display: table;
         clear: both;
     }
+}
+
+/* RGBA fallback mixin for IE */
+@mixin rgba($hex, $a){
+    $rgba: rgba($hex, $a);
+    $ie-hex-str: ie-hex-str($rgba);
+    .no-rgba & {
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+      zoom: 1;
+    }
+    .rgba & {
+      background-color: transparent;
+      background-color: $rgba;
+    }
+}
+
+/* Breakpoint mixin */
+@mixin ltSmall {
+    @media (max-width: 749px) {
+        @content;
+    }
+}
+@mixin gtSmall {
+    @media (min-width: 750px) {
+        @content;
+    }
+}
+@mixin gtMedium {
+    @media (min-width: 1000px) {
+        @content;
+    }
+}
+
+/* Placeholder prefix mixin */
+@mixin placeholder {
+    &::-webkit-input-placeholder {@content}
+    &:-moz-placeholder           {@content}
+    &::-moz-placeholder          {@content}
+    &:-ms-input-placeholder      {@content}
+    &.placeholder                {@content}
+}
+
+/* Background gradient prefix mixin */
+@mixin linear-gradient($fromColor, $toColor) {
+    background-color: $toColor; /* Fallback Color */
+    background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+    background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+    background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+    background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+    background-image:         linear-gradient(top, $fromColor, $toColor);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+
+/* Columns */
+@mixin columns($width, $columns, $colMargin) {
+    .col {
+        float: left;
+        width: ($width - ($colMargin * ($columns - 1))) / $columns;
+        margin-right: $colMargin;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+/* Unselectable prefix mixin */
+@mixin unselectable {
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    user-select: none;
 }

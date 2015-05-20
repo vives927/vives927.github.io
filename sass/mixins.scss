@@ -1,0 +1,85 @@
+@import "partials/base";
+$width: 960px;
+$orange: #ff6701;
+
+.box {
+    @include box-emboss(0.8, 0.05);
+}
+
+.transition {
+    display: block;
+    color: grey;
+    @include transition(color .3s ease);
+
+    &:hover {
+        color: black;
+    }
+}
+
+.faded-text {
+    @include opacity(0.8);
+}
+
+
+.regular-text {
+    @include font-size(14px)
+}
+
+.Arrows {
+    margin: 0 0 30px;
+    @include clearfix; 
+
+    .arrow-left,
+    .up-down,
+    .arrow-right {
+        float: left;
+    }
+
+    .arrow-left {
+        margin: 18px 5px 0 0;
+        @include arrow(20px, 20px, left, $orange);
+    }
+
+    .arrow-right {
+        margin: 18px 0 0 5px;
+        @include arrow(20px, 20px, right, $orange);
+    }
+
+    .arrow-up {
+        margin-bottom: 15px;
+        @include arrow(20px, 20px, up, $orange);
+    }
+
+    .arrow-down {
+        @include arrow(20px, 20px, down, $orange);
+    }
+}
+
+
+.threeCol {
+    margin: 0 0 30px;
+    @include clearfix;
+    @include columns($width, 3, 30px);
+
+    .col {
+        height: 100px;
+        background: lighten($orange, 30%);
+    }
+}
+
+.fiveCol {
+    margin: 0 0 30px;
+    @include clearfix;
+    @include columns($width, 5, 15px);
+
+    .col {
+        height: 100px;
+        background: lighten($orange, 30%);
+    }
+}
+
+.gradient {
+    height: 100px;
+    @include linear-gradient(#000, #BADA55);
+    color: #fff;
+}
